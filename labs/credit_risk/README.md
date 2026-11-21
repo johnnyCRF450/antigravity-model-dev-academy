@@ -14,7 +14,7 @@ This flagship classroom lab teaches **Vibe Coding → Agentic Verification → P
 | `delinq_2yrs`, `emp_length_yrs` | int/float | Prior 24-month delinquencies & tenure (~4.5% NaN) |
 | `loan_purpose`, `region` | string | Nominal categories (`region` used for subgroup slice audits) |
 | `post_origination_collections_flag` | int | **INTENTIONAL LEAKAGE TRAP!** Post-outcome proxy (AUC > 0.90) — must be caught and excluded! |
-| `default_12m` | int | Binary target (~12% default rate) |
+| `default_12m` | int | Binary target (`22.35%` overall default rate; `23.91%` out-of-time holdout) |
 
 ## Run Locally
 

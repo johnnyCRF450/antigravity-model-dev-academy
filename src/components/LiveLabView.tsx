@@ -446,9 +446,26 @@ export const LiveLabView: React.FC = () => {
         {/* Live Prediction Output Panel */}
         <div className="flex flex-col justify-between space-y-5 rounded-3xl border border-indigo-500/30 bg-gradient-to-br from-surface-900 via-surface-950 to-surface-900 p-6 lg:col-span-6">
           <div className="flex items-center justify-between gap-2">
-            <div className="flex items-center gap-2 text-sm font-bold text-white">
-              <Activity className="h-4 w-4 text-emerald-300" />
-              Live Cloud Run Model Response
+            <div>
+              <div className="flex items-center gap-2 text-sm font-bold text-white">
+                <Activity className="h-4 w-4 text-emerald-300" />
+                Live Cloud Run Single-Applicant Score
+              </div>
+              <p className="mt-0.5 text-[11px] text-slate-400">
+                Predicted PD for the single borrower on the left (dataset base rate:{' '}
+                <span className="font-mono font-semibold text-cyan-300">
+                  {modelInfo
+                    ? `${(modelInfo.dataset.overall_default_rate * 100).toFixed(2)}%`
+                    : '22.35%'}
+                </span>{' '}
+                overall ·{' '}
+                <span className="font-mono font-semibold text-cyan-300">
+                  {modelInfo
+                    ? `${(modelInfo.dataset.test_default_rate * 100).toFixed(2)}%`
+                    : '23.91%'}
+                </span>{' '}
+                OOT test)
+              </p>
             </div>
             {prediction && (
               <span className="font-mono text-[11px] text-slate-400">
