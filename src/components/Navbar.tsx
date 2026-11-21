@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   BookOpen,
+  Cloud,
   Cpu,
   FolderGit2,
   Home,
@@ -12,6 +13,7 @@ import {
 export type NavTab =
   | 'home'
   | 'curriculum'
+  | 'live-lab'
   | 'presentations'
   | 'videos'
   | 'studio'
@@ -27,9 +29,10 @@ interface NavbarProps {
 const NAV_ITEMS: { id: NavTab; label: string; icon: React.ComponentType<{ className?: string }> }[] = [
   { id: 'home', label: 'Overview', icon: Home },
   { id: 'curriculum', label: 'Curriculum', icon: BookOpen },
+  { id: 'live-lab', label: 'Live GCP Lab', icon: Cloud },
   { id: 'presentations', label: 'Presentations', icon: Presentation },
-  { id: 'videos', label: 'Video Library', icon: PlaySquare },
-  { id: 'studio', label: 'Agentic Studio', icon: Cpu },
+  { id: 'videos', label: 'Videos', icon: PlaySquare },
+  { id: 'studio', label: 'Studio', icon: Cpu },
   { id: 'resources', label: 'Repo Kit', icon: FolderGit2 },
 ];
 

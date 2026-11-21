@@ -54,11 +54,17 @@ export const HomeView: React.FC<HomeViewProps> = ({
 
           <div className="flex flex-wrap items-center gap-3 pt-2">
             <button
+              onClick={() => onNavigate('live-lab')}
+              className="inline-flex items-center gap-2 rounded-xl bg-emerald-500 px-5 py-3 text-sm font-semibold text-surface-950 shadow-lg shadow-emerald-500/20 transition hover:bg-emerald-400"
+            >
+              Try Live GCP Credit Risk Lab
+              <ArrowRight className="h-4 w-4" />
+            </button>
+            <button
               onClick={() => onNavigate('curriculum')}
               className="inline-flex items-center gap-2 rounded-xl bg-indigo-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-500/25 transition hover:bg-indigo-400"
             >
-              Start 6-Module Curriculum
-              <ArrowRight className="h-4 w-4" />
+              6-Module Curriculum
             </button>
             <button
               onClick={() => onOpenDeck('deck-1')}

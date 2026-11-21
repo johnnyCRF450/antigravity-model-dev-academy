@@ -4,3 +4,8 @@ dist
 *.local
 .env
 .env.*
+backend/artifacts/
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/

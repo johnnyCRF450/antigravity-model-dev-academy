@@ -108,13 +108,14 @@ flowchart LR
 
 ---
 
-## 5. CI/CD Deployment Pipeline
+## 5. CI/CD Deployment Pipeline & Live GCP Cloud Run Architecture
 
 ```mermaid
 flowchart LR
-    DEV["git push origin main\n(johnnyCRF450)"] --> GHA["GitHub Actions\n(.github/workflows/deploy.yml)"]
-    GHA --> BUILD["npm ci && npm run build\n(TypeScript + Vite)"]
-    BUILD --> GHP["GitHub Pages\n(Live Public HTTPS URL)"]
-    DEV -. "Optional Git Integration" .-> VCL["Vercel\n(Preview + Prod URLs)"]
-    DEV -. "Optional Python API" .-> GCR["Google Cloud Run\n(FastAPI / Streamlit Backend)"]
+    DEV["git push origin main\n(johnnyCRF450)"] --> GHP["GitHub Pages (gh-pages)\nLive Classroom Portal"]
+    DEV -. "Optional Git Sync" .-> VCL["Vercel\nPreview + Production Hosting"]
+    BACKEND["backend/ (FastAPI + scikit-learn)\nDockerfile + build_artifacts.py"] --> CB["Google Cloud Build\nDeterministic Container Build"]
+    CB --> GCR["Google Cloud Run (us-central1)\nLive HTTPS Credit Risk API"]
+    GHP -- "Live POST /predict & GET /model-info" --> GCR
+    VCL -. "Live POST /predict & GET /model-info" .-> GCR
 ```

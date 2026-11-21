@@ -6,11 +6,13 @@ import { PresentationsView } from './components/PresentationsView';
 import { VideoLibraryView } from './components/VideoLibraryView';
 import { AgenticStudioView } from './components/AgenticStudioView';
 import { RepoKitView } from './components/RepoKitView';
+import { LiveLabView } from './components/LiveLabView';
 import { COURSE_MODULES } from './data/curriculum';
 
 const VALID_TABS: NavTab[] = [
   'home',
   'curriculum',
+  'live-lab',
   'presentations',
   'videos',
   'studio',
@@ -96,6 +98,7 @@ export const App: React.FC = () => {
             onWatchVideo={watchVideo}
           />
         )}
+        {activeTab === 'live-lab' && <LiveLabView />}
         {activeTab === 'presentations' && (
           <PresentationsView initialDeckId={deckId} />
         )}

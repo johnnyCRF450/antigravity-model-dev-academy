@@ -3,6 +3,8 @@
 **Vibe Fast. Verify Rigorously.** — An interactive training application, classroom presentation suite, curated video library, and clone-ready **Gemini Antigravity** agentic workspace built for teaching **Vibe Coding in Model Development**.
 
 - **Live Hosted Training Portal:** https://johnnycrf450.github.io/antigravity-model-dev-academy/
+- **Live GCP Cloud Run Credit Risk API:** https://credit-risk-demo-api-276763790793.us-central1.run.app/docs
+- **Flagship Credit Risk Lab & Model Card:** [labs/credit_risk/README.md](./labs/credit_risk/README.md) · [MODEL_CARD.md](./labs/credit_risk/MODEL_CARD.md)
 - **Architecture Deep Dive:** [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md)
 - **Standalone Slide Decks (Marp Markdown):**
   - [Deck 01: From Vibe Coding to Agentic Model Development](./presentations/01-vibe-coding-model-dev.md)
@@ -17,6 +19,7 @@
 | **6-Module Training Curriculum** | Progressive syllabus covering Software 3.0, Antigravity surfaces (IDE / 2.0 / CLI), Spec-First ML prompting, `AGENTS.md` + `SKILL.md` customization, Multi-Agent Review Swarms, MCP integrations, and Deployment. |
 | **2 Interactive Presentations (24 Slides)** | Built-in classroom presenter with keyboard navigation (`←`/`→`), fullscreen mode, toggleable **Instructor Speaker Notes**, and Print-to-PDF export (plus standalone Markdown decks in `presentations/`). |
 | **10 Verified Curated Videos** | Real, verified YouTube tutorials & keynotes (Andrej Karpathy, Y Combinator, codebasics, Google Antigravity, MCP & Subagents guides) playable in-app with classroom discussion prompts. |
+| **Live GCP Credit Risk Lab** | Real 6,000-loan out-of-time Credit Risk dataset with an intentional target-leakage trap (`post_origination_collections_flag`), `pytest` verification suite, SR 11-7 `MODEL_CARD.md`, and live FastAPI + scikit-learn inference hosted on Google Cloud Run. |
 | **Interactive Agentic Studio** | Live multi-agent workflow simulator across 4 ML scenarios (Credit Risk, Churn, Forecasting, Fraud) with toggleable governance guardrails and a tailored Antigravity Prompt Builder. |
 | **Clone-Ready `.agents/` Starter Kit** | Working `AGENTS.md`, validation rules, 3 progressive-disclosure `SKILL.md` runbooks (`ml-vibe-blueprint`, `leakage-auditor`, `model-card-generator`), and a 4-agent review swarm playbook. |
 
